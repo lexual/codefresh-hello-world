@@ -1,4 +1,7 @@
 version: "1.0"
+stages:
+  - hello
+  - goodbye
 steps:
   #main_clone:
   #  title: Cloning repository
@@ -6,8 +9,21 @@ steps:
   #  repo: ${{CF_REPO_OWNER}}/${{CF_REPO_NAME}}
   #  revision: ${{CF_BRANCH}}
   #  git: github
-  hello_world:
-    title: Say hello to the world
+  hello:
+    stage: hello
+    title: Say hello
     image: alpine:latest
     commands:
-      - echo "hello world"
+      - echo "hello"
+  world:
+    stage: hello
+    title: Say world
+    image: alpine:latest
+    commands:
+      - echo "world"
+  bye:
+    stage: goodbye
+    title: Say bye
+    image: alpine:latest
+    commands:
+      - echo "goodbye 😭"
