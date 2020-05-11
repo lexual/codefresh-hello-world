@@ -1,11 +1,11 @@
 version: "1.0"
 steps:
-  main_clone:
-    title: Cloning repository
-    type: git-clone
-    repo: ${{CF_REPO_OWNER}}/${{CF_REPO_NAME}}
-    revision: ${{CF_BRANCH}}
-    git: github
+  #main_clone:
+  #  title: Cloning repository
+  #  type: git-clone
+  #  repo: ${{CF_REPO_OWNER}}/${{CF_REPO_NAME}}
+  #  revision: ${{CF_BRANCH}}
+  #  git: github
   hello_world:
     title: Say hello to the world
     image: alpine:latest
